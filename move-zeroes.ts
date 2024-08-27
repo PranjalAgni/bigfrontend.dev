@@ -1,5 +1,5 @@
 // https://bigfrontend.dev/problem/move-zeros
-
+// easy algorithmic question
 // Time: O(N) | Space: O(1)
 function moveZeros(list: Array<any>): void {
   // your code here
