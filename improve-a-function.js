@@ -1,6 +1,8 @@
 // https://bigfrontend.dev/problem/improve-a-function
 // Currently wip
+// still need to solve it
 // TC: O(N) | SC: O(N)
+
 /**
  * @param {object[]} items
  * @excludes { Array< {k: string, v: any} >} excludes
