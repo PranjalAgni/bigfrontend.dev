@@ -15,8 +15,10 @@
  */
 function excludeItems(items, excludes) {
   const answer = [];
+  const orignalItems = [...items];
   excludes.forEach((pair) => {
-    const current = items.filter((item) => !(item[pair.k] === pair.v));
+    const current = items.filter((item) => item[pair.k] === pair.v);
+    items = orignalItems;
     answer.push(...current);
   });
 
