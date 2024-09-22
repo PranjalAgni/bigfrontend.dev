@@ -1,6 +1,7 @@
 // https://bigfrontend.dev/problem/create-a-sum
 // TC: O(N) | Space: O(1)
 // came to zero 40
+// sunday today, training from tomorrow
 /**
  * @param {number} num
  */
