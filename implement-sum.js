@@ -2,6 +2,7 @@
 // TC: O(N) | Space: O(1)
 // came to zero 40
 // sunday today, training from tomorrow
+// training got completed
 /**
  * @param {number} num
  */
