@@ -6,4 +6,9 @@
  */
 function any(promises) {
   // your code here
+  // iterate in promises
+  // wrap it in a `Promise`
+  // attach .then/.catch
+  // when promise fulfills
+  // return that promise
 }
