@@ -11,4 +11,5 @@ function any(promises) {
   // attach .then/.catch
   // when promise fulfills
   // return that promise
+  // think more on how we can solve it
 }
