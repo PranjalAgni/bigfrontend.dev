@@ -4,7 +4,7 @@
  * @return {void}
  */
 function sort(items, newOrder) {
-  // reorder items inline
+  // reorder items inline using indexes
   const newItems = new Array(items.length).fill(0);
   let pos = 0;
   for (const idx of newOrder) {
