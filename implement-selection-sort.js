@@ -1,6 +1,7 @@
 // https://bigfrontend.dev/problem/implement-Selection-Sort
 
 // TC: O(N*N) | SC: O(1)
+// Nice and easy sorting algorithm to write
 /**
  * @param {number[]} arr
  */
