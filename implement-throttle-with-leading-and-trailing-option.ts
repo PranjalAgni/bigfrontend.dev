@@ -1,7 +1,7 @@
 // https://bigfrontend.dev/problem/implement-throttle-with-leading-and-trailing-option
 // This is a Typescript coding problem from BFE.dev
 
-// This is a JavaScript coding problem from BFE.dev
+// Nice problem and little modification on the basic throttling function
 
 function throttle<T extends (...args: any[]) => any>(
   func: T,
