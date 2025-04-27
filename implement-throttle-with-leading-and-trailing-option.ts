@@ -2,45 +2,43 @@
 // This is a Typescript coding problem from BFE.dev
 
 // Nice problem and little modification on the basic throttling function
+// Solution elaboration: https://bigfrontend.dev/problem/implement-throttle-with-leading-and-trailing-option/discuss
+
 
 function throttle<T extends (...args: any[]) => any>(
-  func: T,
-  wait: number,
-  option: { leading: boolean; trailing: boolean } = {
-    leading: true,
-    trailing: true,
-  }
-): T {
+  func: T, 
+  wait: number, 
+  option: {leading: boolean, trailing: boolean } = {leading: true, trailing: true}
+  ): T {
   // your code here
   let cooling = false;
   let lastArgs = null;
   let result = null;
 
-  return function (...args: any[]): T {
+  return function(...args: any[]): T {
     if (!cooling) {
       cooling = true;
+      const startWait = () => setTimeout(() => {
+        if (option.trailing && lastArgs) {
+          result = func(...lastArgs);
+          lastArgs = null;
+          startWait();
+        } else {
+          cooling = false;
+        }
+      }, wait);
 
       if (option.leading) {
         result = func(...args);
+      } else {
+        lastArgs = args;
       }
 
-      setTimeout(() => {
-        cooling = false;
-        if (option.trailing) {
-          result = func(...args);
-        }
-
-        if (lastArgs) {
-          if (option.leading || option.trailing) {
-            result = func(...lastArgs);
-          }
-          lastArgs = null;
-        }
-      }, wait);
+      startWait();
     } else {
       lastArgs = args;
     }
 
     return result;
-  };
+  }
 }
