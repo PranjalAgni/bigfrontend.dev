@@ -1,3 +1,4 @@
+// binary search in JS
 // Time: O(logn) | Space: O(1)
 /**
  * @param {number[]} arr - ascending unique array
