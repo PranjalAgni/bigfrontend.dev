@@ -15,6 +15,34 @@ class AsyncTaskQueue {
         this.pollRunner();
     }
 
+    smartPollRunner() {
+        // What steps need to be taken here??
+        // 1. Instead of incr/decr vars we can do something else
+        // think think think
+
+        // concurrent queue
+        // waiting queue
+        
+        
+        // waiting queue mein add kra dia
+        // we check if concurrent queue slot is empty 
+        // fill the concurrent queue
+        // concurrent queue starts executing things once done it removes tasks from itself
+
+
+        // we need some sort of constant checker
+        // which monitors concurrent queue asap a slot is empty
+        // we transfer task from waiting queue to concurrent queue
+
+        // ?? reading from a queue only
+
+        if (this.asyncQ.length > 0) {
+            const task = this.asyncQ.shift();
+            this.run(task);
+
+        }
+    }
+
     pollRunner() {
         if (this.numRunning <= this.concurrency) {
             this.numRunning += 1;
